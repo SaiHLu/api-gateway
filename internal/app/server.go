@@ -26,7 +26,8 @@ type AppServer struct {
 	quit chan os.Signal
 
 	// Dependencies Injection
-	swaggerHandler *handler.SwaggerHandler
+	swaggerHandler     *handler.SwaggerHandler
+	healthCheckHandler *handler.HealthCheckHandler
 
 	productClientConn *grpc.ClientConn
 	productHandler    *handler.ProductHandler

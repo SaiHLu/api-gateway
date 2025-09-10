@@ -7,6 +7,7 @@ import (
 
 func (s *AppServer) dependenciesInjection() error {
 	s.swaggerHandler = handler.NewSwaggerHandler(s.ginEngine)
+	s.healthCheckHandler = handler.NewHealthCheckHandler(s.ginEngine)
 
 	orderConn, orderClient, err := grpcclient.NewOrderClient(s.envConfig.GrpcServer.OrderService)
 	if err != nil {
