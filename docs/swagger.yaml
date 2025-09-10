@@ -1,0 +1,55 @@
+info:
+  contact: {}
+paths:
+  /orders/:
+    get:
+      consumes:
+      - application/json
+      description: Get order list with the provided details
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get order list
+      tags:
+      - Orders
+    post:
+      consumes:
+      - application/json
+      description: Create a new order with the provided details
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Create a new order
+      tags:
+      - Orders
+swagger: "2.0"
