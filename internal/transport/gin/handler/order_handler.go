@@ -75,6 +75,7 @@ func (o *OrderHandler) Create(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, map[string]any{
 			"message": "Something went wrong",
 			"success": false,
+			"error":   err.Error(),
 		})
 		return
 	}
@@ -98,6 +99,7 @@ func (o *OrderHandler) GetOrderList(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, map[string]any{
 			"message": "Something went wrong",
 			"success": false,
+			"error":   err.Error(),
 		})
 		return
 	}

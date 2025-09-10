@@ -56,6 +56,7 @@ func (p *ProductHandler) Create(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, map[string]any{
 			"message": "Something went wrong",
 			"success": false,
+			"error":   err.Error(),
 		})
 		return
 	}
@@ -79,6 +80,7 @@ func (p *ProductHandler) GetProductList(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, map[string]any{
 			"message": "Something went wrong",
 			"success": false,
+			"error":   err.Error(),
 		})
 		return
 	}
