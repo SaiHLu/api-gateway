@@ -52,4 +52,55 @@ paths:
       summary: Create a new order
       tags:
       - Orders
+  /products/:
+    get:
+      consumes:
+      - application/json
+      description: Create product list with the provided details
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Create product list
+      tags:
+      - Products
+    post:
+      consumes:
+      - application/json
+      description: Create a new product with the provided details
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Create a new product
+      tags:
+      - Products
 swagger: "2.0"
